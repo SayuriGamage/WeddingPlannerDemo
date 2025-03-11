@@ -1,0 +1,401 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333; /* Dark gray for text */
+    background-color: #ffffff; /* White background */
+}
+
+/* Header Section */
+#header {
+    background-color: #ffffff; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar-brand {
+    color: #333; /* Dark gray */
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Dark gray */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000; /* Black */
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #ffffff; /* White */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+.navbar-nav .dropdown-item {
+    color: #333; /* Dark gray */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #f8f9fa; /* Light gray */
+    color: #000; /* Black */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f8f9fa; /* Light gray */
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: #333; /* Dark gray */
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    color: #666; /* Medium gray */
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn {
+    background-color: #333; /* Dark gray */
+    color: #ffffff; /* White */
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+
+.hero-section .btn:hover {
+    background-color: #000; /* Black */
+}
+
+/* About Us Section */
+.about-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff; /* White */
+}
+
+.about-section h2 {
+    color: #333; /* Dark gray */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #666; /* Medium gray */
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.about-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray */
+    border-radius: 10px;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #333; /* Dark gray */
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    color: #333; /* Dark gray */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666; /* Medium gray */
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f9fa; /* Light gray */
+}
+
+.services-section h2 {
+    color: #333; /* Dark gray */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.service-card i {
+    font-size: 2rem;
+    color: #333; /* Dark gray */
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #333; /* Dark gray */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #666; /* Medium gray */
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff; /* White */
+}
+
+.testimonials-section h2 {
+    color: #333; /* Dark gray */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 45%;
+    background-color: #f8f9fa; /* Light gray */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.testimonial-card p {
+    color: #666; /* Medium gray */
+}
+
+.testimonial-card h4 {
+    color: #333; /* Dark gray */
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f9fa; /* Light gray */
+}
+
+.gallery-section h2 {
+    color: #333; /* Dark gray */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-grid img {
+    width: 30%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff; /* White */
+}
+
+.pricing-section h2 {
+    color: #333; /* Dark gray */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    width: 30%;
+    background-color: #f8f9fa; /* Light gray */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.pricing-card h3 {
+    color: #333; /* Dark gray */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.pricing-card .price {
+    color: #333; /* Dark gray */
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    color: #666; /* Medium gray */
+    margin-bottom: 10px;
+}
+
+.pricing-card .btn {
+    background-color: #333; /* Dark gray */
+    color: #ffffff; /* White */
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+
+.pricing-card .btn:hover {
+    background-color: #000; /* Black */
+}
+
+/* Team Section */
+.team-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f9fa; /* Light gray */
+}
+
+.team-section h2 {
+    color: #333; /* Dark gray */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    width: 30%;
+    text-align: center;
+    background-color: #ffffff; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    color: #333; /* Dark gray */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    color: #666; /* Medium gray */
+}
+
+/* Contact Us Section */
+.contact-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff; /* White */
+}
+
+.contact-section h2 {
+    color: #333; /* Dark gray */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Light gray */
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #333; /* Dark gray */
+    color: #ffffff; /* White */
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #000; /* Black */
+}
+
+/* Footer Section */
+#footer {
+    background-color: #333; /* Dark gray */
+    color: #ffffff; /* White */
+    padding: 40px 0;
+}
+
+#footer h5 {
+    color: #ffffff; /* White */
+}
+
+#footer a {
+    color: #ffffff; /* White */
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #ddd; /* Light gray */
+}
+
+#footer_b {
+    background-color: #000; /* Black */
+    color: #ffffff; /* White */
+    padding: 20px 0;
+    text-align: center;
+}
+
+#footer_b p {
+    margin: 0;
+}

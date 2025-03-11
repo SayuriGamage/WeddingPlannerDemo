@@ -1,0 +1,573 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wed Planner</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/home.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+&lt;!&ndash; Header Section &ndash;&gt;
+<section id="header">
+	<nav class="navbar navbar-expand-md navbar-light pt-2 pb-2 bg-white" id="navbar_sticky">
+		<div class="container-xl">
+			<a class="text-black p-0 navbar-brand fw-bold text-black family_o me-4" href="index.html">
+				<i class="fa fa-gift col_yell"></i> Wedding <br> <span class="text-uppercase font_14 col_yell">Planner</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mb-0 ms-auto">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Venue
+						</a>
+						<ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="venue.html">Venue</a></li>
+							<li><a class="dropdown-item border-0" href="detail.html">Venue Detail</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blog_detail.html">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contacts</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav mb-0 ms-auto">
+					<li class="nav-item">
+						<a class="nav-link fs-5 lh-1 col_yell" href="login.html">
+							<i class="fa fa-user"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link button" href="signinup.html">Sign Up</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</section>
+
+&lt;!&ndash; Footer Section &ndash;&gt;
+<section id="footer" class="p_3 bg_blue mt-1">
+	<div class="container-xl">
+		<div class="footer_1 row">
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Start Planning</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">Search By Vendor</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Search By City</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Top Rated Vendors</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Destination Wedding</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Wedding Ideas</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Blog</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Inspiration Gallery</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Real Wedding</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Venue</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Photo Gallery</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">Bridal Wear</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Jewellery</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Bridal Makeup & Hair</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Groom Wear</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Accessories</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Decor</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Home</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">About</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Contact Us</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Site Map</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Terms & Conditions</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Privacy Policy</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Our Gallery</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Wedding Invitation</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Card Designs</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Save the Date Templates</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Invitation Video Templates</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Our Location</a></h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="line_1 mt-4 mb-4">
+		<div class="footer_2 row">
+			<div class="col-md-12">
+				<h6 class="text-white">Bridal - Your Personal Wedding Planner</h6>
+				<p class="mb-0 text-white-50 mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+			</div>
+		</div>
+		<div class="footer_3 row mt-4">
+			<div class="col-md-5">
+				<div class="footer_3l">
+					<h6 class="text-white mb-3">Contact us for best deals</h6>
+					<div class="footer_3li row">
+						<div class="col-md-6">
+							<div class="footer_3lil">
+								<h6 class="text-white">For Vendors</h6>
+								<h6 class="mb-0 text-white-50 lh-base fw-normal">info@gmail.com <br> +123 4567 890</h6>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="footer_3lil">
+								<h6 class="text-white">For User</h6>
+								<h6 class="mb-0 text-white-50 lh-base fw-normal">info@gmail.com <br> +123 4567 890</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer_3m">
+					<h6 class="text-white mb-3">Contact us for best deals</h6>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-facebook col_yell me-1"></i> Facebook</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-twitter col_yell me-1"></i> Twitter</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-instagram col_yell me-1"></i> Instagram</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-youtube-play col_yell me-1"></i> Youtube</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="footer_3r">
+					<h6 class="text-white mb-3">Get Latest Blog Alerts</h6>
+					<p class="text-white-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					<div class="input-group">
+						<input type="text" class="form-control rounded-0" placeholder="Email">
+						<span class="input-group-btn">
+                                <button class="btn btn-primary bg_yell rounded-0 p-3 px-4 border-0 fw-bold" type="button">Submit</button>
+                            </span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+&lt;!&ndash; Footer Bottom Section &ndash;&gt;
+<section id="footer_b" class="pt-3 pb-3 bg_light">
+	<div class="container-xl">
+		<div class="footer_b1 row text-center">
+			<div class="col-md-12">
+				<p class="mb-0 text-white-50">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_yell fw-bold" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	window.onscroll = function() {myFunction()};
+	var navbar_sticky = document.getElementById("navbar_sticky");
+	var sticky = navbar_sticky.offsetTop;
+	var navbar_height = document.querySelector('.navbar').offsetHeight;
+	function myFunction() {
+		if (window.pageYOffset >= sticky + navbar_height) {
+			navbar_sticky.classList.add("sticky")
+			document.body.style.paddingTop = navbar_height + 'px';
+		} else {
+			navbar_sticky.classList.remove("sticky");
+			document.body.style.paddingTop = '0'
+		}
+	}
+</script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wed Planner</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/home.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!-- Header Section -->
+<section id="header">
+	<nav class="navbar navbar-expand-md navbar-light pt-2 pb-2 bg-white" id="navbar_sticky">
+		<div class="container-xl">
+			<a class="text-black p-0 navbar-brand fw-bold text-black family_o me-4" href="index.html">
+				<i class="fa fa-gift col_yell"></i> Wedding <br> <span class="text-uppercase font_14 col_yell">Planner</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mb-0 ms-auto">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#services">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#testimonials">Testimonials</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#gallery">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#pricing">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#team">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav mb-0 ms-auto">
+					<li class="nav-item">
+						<a class="nav-link fs-5 lh-1 col_yell" href="login.html">
+							<i class="fa fa-user"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link button" href="signinup.html">Sign Up</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</section>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+	<div class="container">
+		<div class="hero-content">
+			<h1>Your Dream Wedding Starts Here</h1>
+			<p>We make your special day unforgettable with our expert planning and services.</p>
+			<a href="#services" class="btn btn-primary">Explore Services</a>
+		</div>
+	</div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="about-section">
+	<div class="container">
+		<h2>About Us</h2>
+		<p>We are a team of passionate wedding planners dedicated to creating magical moments for couples. With years of experience, we ensure every detail is perfect for your big day.</p>
+		<div class="about-features">
+			<div class="feature">
+				<i class="fa fa-heart"></i>
+				<h3>Personalized Planning</h3>
+				<p>Tailored plans to suit your unique style and preferences.</p>
+			</div>
+			<div class="feature">
+				<i class="fa fa-calendar"></i>
+				<h3>Stress-Free Coordination</h3>
+				<p>We handle all the details so you can enjoy your day.</p>
+			</div>
+			<div class="feature">
+				<i class="fa fa-star"></i>
+				<h3>Top Vendors</h3>
+				<p>Access to the best vendors in the industry.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section">
+	<div class="container">
+		<h2>Our Services</h2>
+		<div class="services-grid">
+			<div class="service-card">
+				<i class="fa fa-camera"></i>
+				<h3>Photography</h3>
+				<p>Capture every moment with our professional photographers.</p>
+			</div>
+			<div class="service-card">
+				<i class="fa fa-cutlery"></i>
+				<h3>Catering</h3>
+				<p>Delicious menus tailored to your taste.</p>
+			</div>
+			<div class="service-card">
+				<i class="fa fa-music"></i>
+				<h3>Entertainment</h3>
+				<p>Live music and DJs to keep the party going.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
+	<div class="container">
+		<h2>What Our Clients Say</h2>
+		<div class="testimonials-grid">
+			<div class="testimonial-card">
+				<p>"The best wedding planners! They made our day so special and stress-free."</p>
+				<h4>- Jane & John</h4>
+			</div>
+			<div class="testimonial-card">
+				<p>"Amazing attention to detail. Highly recommend!"</p>
+				<h4>- Sarah & Mike</h4>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery-section">
+	<div class="container">
+		<h2>Gallery</h2>
+		<div class="gallery-grid">
+			<img src="img/gallery1.jpg" alt="Wedding Image 1">
+			<img src="img/gallery2.jpg" alt="Wedding Image 2">
+			<img src="img/gallery3.jpg" alt="Wedding Image 3">
+		</div>
+	</div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing-section">
+	<div class="container">
+		<h2>Pricing Plans</h2>
+		<div class="pricing-grid">
+			<div class="pricing-card">
+				<h3>Basic Plan</h3>
+				<p class="price">$500</p>
+				<ul>
+					<li>Venue Selection</li>
+					<li>Basic Decor</li>
+					<li>Photography</li>
+				</ul>
+				<a href="#" class="btn btn-primary">Choose Plan</a>
+			</div>
+			<div class="pricing-card">
+				<h3>Premium Plan</h3>
+				<p class="price">$1000</p>
+				<ul>
+					<li>Full Planning</li>
+					<li>Luxury Decor</li>
+					<li>Photography & Videography</li>
+				</ul>
+				<a href="#" class="btn btn-primary">Choose Plan</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="team-section">
+	<div class="container">
+		<h2>Our Team</h2>
+		<div class="team-grid">
+			<div class="team-card">
+				<img src="img/team1.jpg" alt="Team Member 1">
+				<h3>John Doe</h3>
+				<p>Wedding Planner</p>
+			</div>
+			<div class="team-card">
+				<img src="img/team2.jpg" alt="Team Member 2">
+				<h3>Jane Smith</h3>
+				<p>Event Coordinator</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+	<div class="container">
+		<h2>Contact Us</h2>
+		<form class="contact-form">
+			<input type="text" placeholder="Your Name" required>
+			<input type="email" placeholder="Your Email" required>
+			<textarea placeholder="Your Message" required></textarea>
+			<button type="submit" class="btn btn-primary">Send Message</button>
+		</form>
+	</div>
+</section>
+
+<section id="footer" class="p_3 bg_blue mt-1">
+	<div class="container-xl">
+		<div class="footer_1 row">
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Start Planning</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">Search By Vendor</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Search By City</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Top Rated Vendors</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Destination Wedding</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Wedding Ideas</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Blog</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Inspiration Gallery</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Real Wedding</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Venue</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Photo Gallery</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">Bridal Wear</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Jewellery</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Bridal Makeup & Hair</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Groom Wear</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Accessories</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Decor</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Home</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">About</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Contact Us</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Site Map</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Terms & Conditions</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Privacy Policy</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Our Gallery</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="footer_1i">
+					<h5 class="text-white mb-3">Wedding Invitation</h5>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#">Wedding Card Designs</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Save the Date Templates</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#">Invitation Video Templates</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#">Our Location</a></h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="line_1 mt-4 mb-4">
+		<div class="footer_2 row">
+			<div class="col-md-12">
+				<h6 class="text-white">Bridal - Your Personal Wedding Planner</h6>
+				<p class="mb-0 text-white-50 mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+			</div>
+		</div>
+		<div class="footer_3 row mt-4">
+			<div class="col-md-5">
+				<div class="footer_3l">
+					<h6 class="text-white mb-3">Contact us for best deals</h6>
+					<div class="footer_3li row">
+						<div class="col-md-6">
+							<div class="footer_3lil">
+								<h6 class="text-white">For Vendors</h6>
+								<h6 class="mb-0 text-white-50 lh-base fw-normal">info@gmail.com <br> +123 4567 890</h6>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="footer_3lil">
+								<h6 class="text-white">For User</h6>
+								<h6 class="mb-0 text-white-50 lh-base fw-normal">info@gmail.com <br> +123 4567 890</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer_3m">
+					<h6 class="text-white mb-3">Contact us for best deals</h6>
+					<div class="row footer_3ism">
+						<h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-facebook col_yell me-1"></i> Facebook</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-twitter col_yell me-1"></i> Twitter</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-instagram col_yell me-1"></i> Instagram</a></h6>
+						<h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-youtube-play col_yell me-1"></i> Youtube</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="footer_3r">
+					<h6 class="text-white mb-3">Get Latest Blog Alerts</h6>
+					<p class="text-white-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					<div class="input-group">
+						<input type="text" class="form-control rounded-0" placeholder="Email">
+						<span class="input-group-btn">
+                                <button class="btn btn-primary bg_yell rounded-0 p-3 px-4 border-0 fw-bold" type="button">Submit</button>
+                            </span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="footer_b" class="pt-3 pb-3 bg_light">
+	<div class="container-xl">
+		<div class="footer_b1 row text-center">
+			<div class="col-md-12">
+				<p class="mb-0 text-white-50">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_yell fw-bold" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	window.onscroll = function() {myFunction()};
+	var navbar_sticky = document.getElementById("navbar_sticky");
+	var sticky = navbar_sticky.offsetTop;
+	var navbar_height = document.querySelector('.navbar').offsetHeight;
+	function myFunction() {
+		if (window.pageYOffset >= sticky + navbar_height) {
+			navbar_sticky.classList.add("sticky")
+			document.body.style.paddingTop = navbar_height + 'px';
+		} else {
+			navbar_sticky.classList.remove("sticky");
+			document.body.style.paddingTop = '0'
+		}
+	}
+</script>
+</body>
+</html>

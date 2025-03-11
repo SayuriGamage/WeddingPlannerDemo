@@ -1,0 +1,171 @@
+/*
+Template Name: Wed Planner
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************list****************/
+.list_1l2  li a {
+border: 1px solid #f3e3c2;
+margin: 0px 2px 6px 0px;
+padding: 12px 16px 12px 16px;
+display: inline-block;
+font-size: 14px;
+transition: 0.3s;
+font-weight:bold;
+}
+.list_1r2im1i2 span {
+width: 40px;
+height: 40px;
+line-height: 35px;
+text-align:center;
+border:2px solid #fff;
+}
+.list_1r2im1i2 {
+bottom:15px;
+}
+.list_1r2im2  li a {
+background:#fafafa;
+margin: 0px 2px 6px 0px;
+padding: 8px 16px 8px 16px;
+display: inline-block;
+font-size: 13px;
+transition: 0.3s;
+}
+.list_dt1l1i1{
+width:95%;
+left:13px;
+bottom:-130px;
+ }
+.list_dt1l1{
+margin-bottom:150px; 
+ }
+
+/*********************list_end****************/
+
+
+@media screen and (max-width : 767px){
+.list_1l h3{
+text-align:center; 
+ }
+.list_1l h5{
+text-align:center; 
+ }
+.list_1r{
+margin-top:20px; 
+ }
+.list_1r1{
+text-align:center;  
+ }
+.list_1r2im {
+margin-top:8px;
+margin-bottom:8px;
+text-align:center; 
+ }
+.list_dt1l1i1 {
+width: 100%;
+position:static!important;
+margin-top:15px;
+}
+.list_dt1l1 {
+margin-bottom: 15px;
+}
+.list_dt1l2  h4{
+text-align:center; 
+ }
+.list_dt1l2ili {
+margin-top:8px;
+margin-bottom:8px; 
+ }
+.list_dt1l2ilil{
+margin-bottom: 15px;
+text-align:center; 
+ }
+.list_dt1r{
+margin-top:15px; 
+ }
+.list_dt1r1  h4{
+text-align:center;  
+ }
+.list_dt1r1il{
+margin-top:8px;
+margin-bottom:8px;
+text-align:center;  
+ }
+.list_dt1r1i1l{
+margin-bottom:15px;
+text-align:center; 
+ }
+.list_dt1r1i1r{
+text-align:center!important; 
+ }
+.list_dt1r1 {
+text-align:center; 
+ }
+.list_dt1r1il{
+text-align:left; 
+ }
+.list_dt2  ul li{
+margin:5px 5px!important;
+ }
+.list_dt2 h4{
+text-align:center;
+ }
+.list_dt3 h4{
+text-align:center;
+ }
+.list_dt3im {
+ margin-top:15px;
+ margin-bottom:15px;
+ }
+.list_dt3ir {
+text-align:center;
+ }
+.list_dt4  h4{
+text-align:center; 
+ }
+
+.list_dt5  h3{
+text-align:center; 
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.list_dt1l2ilil span{
+font-size:20px!important; 
+ }
+.list_dt1r1il .form-check{
+font-size:12px; 
+ }
+.list_dt2  ul li{
+margin:5px 5px!important;
+ }
+.list_dt1l1i1{
+width:100%;
+left:0;
+ }
+.list_dt1l1i1 h4{
+font-size:14px;
+margin-bottom:20px!important;
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.list_dt1l1i1 h4{
+font-size:18px;
+margin-bottom:20px!important;
+ }
+ }
+@media (min-width:1201px) and (max-width:1270px) {
+
+ }
+
+
+

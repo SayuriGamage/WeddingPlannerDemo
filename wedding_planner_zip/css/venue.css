@@ -1,0 +1,294 @@
+/* Modern Wedding Planner CSS - Gray & White Theme */
+
+/* Base Styles & Color Variables */
+:root {
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #757575;
+    --darker-gray: #424242;
+    --charcoal: #212121;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--darker-gray);
+    background-color: var(--white);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--darker-gray);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--charcoal);
+}
+
+.container-xl {
+    padding: 0 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+#header {
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--charcoal);
+}
+
+.navbar-brand i, .col_yell {
+    color: var(--dark-gray) !important;
+}
+
+.navbar-brand span {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.nav-link {
+    color: var(--darker-gray);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--charcoal);
+    border-bottom: 2px solid var(--dark-gray);
+}
+
+.dropdown-menu {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: none;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    color: var(--darker-gray);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-gray);
+    color: var(--charcoal);
+}
+
+.button {
+    background-color: var(--dark-gray);
+    color: var(--white) !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: var(--darker-gray);
+    transform: translateY(-2px);
+}
+
+/* Sticky Navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Venue List Section */
+#list {
+    padding: 4rem 0;
+}
+
+.list_1l {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.list_1l1 h5 {
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+}
+
+.list_1l1 hr {
+    border-color: var(--medium-gray);
+}
+
+.list_1r1 h2 {
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+}
+
+.list_1r2im {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.list_1r2im:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.list_1r2im1i1 h6 {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.list_1r2im2 h6 a {
+    color: var(--charcoal);
+    font-weight: 600;
+}
+
+.list_1r2im2 h6 a:hover {
+    color: var(--dark-gray);
+}
+
+/* Footer */
+#footer {
+    background-color: var(--darker-gray) !important;
+    padding: 4rem 0 2rem;
+}
+
+#footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: var(--white);
+}
+
+#footer h5:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--medium-gray);
+}
+
+#footer h6 a {
+    color: var(--light-gray);
+    transition: var(--transition);
+}
+
+#footer h6 a:hover {
+    color: var(--white) !important;
+    padding-left: 5px;
+}
+
+.line_1 {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer_3li {
+    margin-top: 2rem;
+}
+
+.input-group .form-control {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.input-group .btn {
+    background-color: var(--dark-gray);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    color: var(--white);
+}
+
+.input-group .btn:hover {
+    background-color: var(--charcoal);
+}
+
+/* Footer Bottom */
+#footer_b {
+    background-color: var(--charcoal) !important;
+    padding: 1rem 0;
+}
+
+#footer_b p {
+    margin: 0;
+    color: var(--light-gray);
+}
+
+#footer_b a {
+    color: var(--white);
+    font-weight: 600;
+}
+
+#footer_b a:hover {
+    color: var(--medium-gray);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        border: none;
+        padding: 0.5rem;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .center_sm {
+        text-align: center;
+    }
+
+    #footer h5 {
+        margin-top: 2rem;
+    }
+
+    #footer .col:first-child h5 {
+        margin-top: 0;
+    }
+
+    .list_1r2im {
+        margin-bottom: 1.5rem;
+    }
+}

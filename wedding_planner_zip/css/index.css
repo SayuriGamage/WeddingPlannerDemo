@@ -1,0 +1,258 @@
+/*
+Template Name: Wed Planner
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************center_home****************/
+.center_h{
+background-image: url(../img/1.jpg);
+background-position: center;
+ }
+.center_h1l{
+border:5px solid #fff; 
+ }
+/*********************center_home_end****************/
+
+
+/*********************profile****************/
+.profile_2i1i img{
+border:4px solid  #dcb560;
+ }
+.profile_2i1i1{
+bottom:0;
+right:40px; 
+ }
+.profile_2i1i1 span{
+width:30px;
+height:30px;
+line-height:30px; 
+ }
+
+.find_1r {
+min-height:480px; 
+ }
+/*********************profile_end****************/
+
+/*********************venue****************/
+.venue_1l{
+background-image: url(../img/22.jpg);
+background-position: center; 
+ }
+.venue1li{
+border:5px solid #fff;
+ }
+.venue_1l1{
+background-image: url(../img/23.jpg);
+background-position: center; 
+ }
+.venue_1l2{
+min-height:252px;
+padding-top:45px; 
+ }
+/*********************venue_end****************/
+
+/*********************explore****************/
+.explorem{
+padding-top:100px;
+padding-bottom:100px; 
+ }
+#explore{
+background-image: url(../img/24.jpg);
+background-position: center; 
+ }
+/*********************explore_end****************/
+
+
+/*********************blog****************/
+.blog_1 ul li a{
+background:#fff;
+padding: 12px 25px;
+font-weight:bold; 
+display:block;
+ }
+/*********************blog_end****************/
+
+/*********************forum****************/
+.forum_1i1{
+top:-25px; 
+ }
+ 
+.occasion_1r h6:after {
+display: inline-block;
+width: 15%;
+height: 1px;
+background-color: #dcb560;
+vertical-align: middle;
+margin-left: 2%;
+content: "";
+}
+.occasion_1r h6:before {
+display: inline-block;
+width: 15%;
+height: 1px;
+background-color: #dcb560;
+vertical-align: middle;
+margin-right: 2%;
+content: "";
+}
+.occasion_1r{
+margin-top:180px; 
+ }
+/*********************forum_end****************/
+
+@media screen and (max-width : 767px){
+.center_h1l1 {
+text-align:center; 
+ }
+.center_h1l1 p{
+text-align:left; 
+ }
+.serv_h3l h6{
+text-align:center; 
+ }
+.serv_h3r{
+margin-top:15px;
+ }
+.profile_2i1i1{
+position:static!important;
+margin-top:15px; 
+ }
+.profile_2i {
+margin-top:8px;
+margin-bottom:8px; 
+ }
+.find_1r {
+padding:15px!important;
+text-align:center; 
+ }
+.find_1r p{
+text-align:left; 
+ }
+
+.venue_1l1 {
+margin-top:15px;
+padding:10px!important;
+ }
+.venue_1l2 {
+margin-top:15px;
+ }
+.explore_1 br{
+display:none; 
+ }
+.explore_1 h1{
+text-align:left;
+ }
+.profile_1{
+text-align:center; 
+ }
+.blog_1 ul li {
+margin-top:5px;
+margin-bottom:5px;
+}
+.plan_1i{
+margin-top:8px;
+margin-bottom:8px; 
+text-align:center;
+ }
+.plan_1i1r{
+margin-top:15px; 
+ }
+.plan_1i1r p{
+text-align:left;
+ }
+.forum_1i{
+margin-top:20px; 
+margin-bottom:20px;
+ }
+.find_1l img{
+height:auto; 
+ }
+.occasion_1  .ps-0{
+padding-left:12px!important; 
+ }
+.occasion_1  .pe-0{
+padding-right:12px!important; 
+ }
+.occasion_1r {
+margin-top:0;
+        padding-left: 20px;
+}
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.center_h1 .col-md-4{
+width:50%; 
+ }
+.serv_h3l h1{
+font-size:20px; 
+ }
+.serv_h3l p{
+font-size:14px; 
+ }
+.profile_2i1i img{
+width:100%; 
+ }
+.profile_2i1i1{
+position:static!important;
+margin-top:15px; 
+ }
+.find_1r {
+padding:20px!important;
+}
+.venue_1 .button_2{
+padding-left:15px;
+padding-right:15px;
+font-size:14px;
+}
+
+.venue_1l2  h3{
+font-size:18px;
+}
+.venue1li   h3{
+font-size:20px;
+}
+.blog_1 ul li {
+margin-top:5px;
+margin-bottom:5px;
+}
+.plan_1i1l span{
+font-size:22px!important; 
+ }
+
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.center_h1 .col-md-4{
+width:40%; 
+ }
+.find_1r {
+padding:25px!important;
+}
+.find_1r  h2{
+font-size:22px; 
+ }
+.venue1li   h3{
+font-size:24px;
+}
+.blog_1 ul li {
+margin-top:5px;
+margin-bottom:5px;
+}
+
+ }
+@media (min-width:1201px) and (max-width:1310px) {
+.find_1r {
+padding:25px!important;
+}
+ }
+
+
+

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wed Planner</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/font-awesome.min.css" rel="stylesheet" >
+    <link href="css/venue.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+
+
+<section id="header">
+    <nav class="navbar navbar-expand-md navbar-light pt-2 pb-2 bg-white" id="navbar_sticky">
+        <div class="container-xl">
+            <a class="text-black p-0 navbar-brand fw-bold text-black family_o me-4" href="index.html"><i class="fa fa-gift col_yell"></i>  Wedding  <br> <span class="text-uppercase font_14 col_yell">Planner</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Venue
+                        </a>
+                        <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="venue.html"> Venue</a></li>
+                            <li><a class="dropdown-item border-0" href="detail.html"> Venue Detail</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog_detail.html">Blog</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacts</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav mb-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 lh-1 col_yell" href="login.html"><i class="fa fa-user"></i> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link button" href="login.html">  Sign Up </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+
+
+<section id="list" class="p_3">
+    <div class="container-xl">
+        <div class="row list_1">
+            <div class="col-md-3">
+                <div class="list_1l">
+                    <div class="list_1l1">
+                        <h3 class="mb-3">Filter By</h3>
+                        <h5>VENUE TYPE</h5><hr>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Banquet Halls
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Wedding Lawns
+                            </label>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Villa / Farmhouse
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                5 Star Wedding Hotels
+                            </label>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Wedding Resorts
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Cocktail Venues
+                            </label>
+                        </div>
+                    </div>
+                    <div class="list_1l1 mt-4">
+                        <h5>LOCALITY</h5><hr>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Maldives
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Argentina
+                            </label>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Australia
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Mexico
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="list_1l2 mt-4">
+                        <h5>VENUE BUDGET</h5><hr>
+                        <ul class="mb-0">
+                            <li class="d-inline-block"><a href="detail.html">Less than 1 Lakh</a></li>
+                            <li class="d-inline-block"><a href="detail.html">1-2 Lakh</a></li>
+                            <li class="d-inline-block"><a href="detail.html">2-3 Lakh</a></li>
+                            <li class="d-inline-block"><a href="detail.html">3-4 Lakh</a></li>
+                            <li class="d-inline-block"><a href="detail.html">4-5 Lakh</a></li>
+                        </ul>
+                    </div>
+                    <div class="list_1l1 mt-4">
+                        <h5>FACILITIES</h5><hr>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Food provided by venue
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Outside food allowed
+                            </label>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Alcohol allowed
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Outside alcohol allowed
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Music allowed late
+                            </label>
+                        </div>
+                    </div>
+                    <div class="list_1l1 mt-4">
+                        <h5>MEAL PREFERENCES</h5><hr>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Vegetarian Only
+                            </label>
+                        </div>
+                        <div class="form-check  mt-2">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                NonVegetarian
+                            </label>
+                        </div>
+                        <h6 class="mb-0 mt-4 center_sm"><a class="button" href="detail.html">Filter</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="list_1r">
+                    <div class="list_1r1">
+                        <h2>Banquet Halls</h2>
+                        <p class="mb-0">Showing 9 results as per your search criteria</p>
+                    </div>
+                    <div class="list_1r2">
+                        <div class="list_1r2i row mt-4">
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/18.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">The Lailit Ashoka</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/19.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">Redwood Resorts</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/20.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">The Rajes Palace</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list_1r2i row mt-4">
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/21.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">The Lailit Ashoka</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/34.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">Redwood Resorts</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/35.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">The Rajes Palace</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list_1r2i row mt-4">
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/36.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">The Lailit Ashoka</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/37.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">Redwood Resorts</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="list_1r2im p-2 shadow_box">
+                                    <div class="list_1r2im1 position-relative">
+                                        <div class="list_1r2im1i">
+                                            <div class="grid clearfix">
+                                                <figure class="effect-jazz mb-0">
+                                                    <a href="detail.html"><img src="img/38.jpg" class="w-100" alt="abc"></a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="list_1r2im1i1 position-absolute top-0 p-2">
+                                            <h6 class="d-inline-block bg_yell text-white rounded-3 p-2 fw-normal font_13 px-3">Banquet Halls</h6>
+                                        </div>
+                                        <div class="list_1r2im1i2 position-absolute px-2 text-end w-100">
+                                            <span class="d-inline-block text-white bg_yell rounded-circle fs-5"><i class="fa fa-check"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="list_1r2im2 pt-3">
+                                        <h6><a href="detail.html">The Rajes Palace</a></h6>
+                                        <h6 class="font_14"><i class="fa fa-star col_yell me-1"></i>  5.0 <span class="fw-normal">(18 reviews)</span></h6>
+                                        <h6 class="text-muted font_14 fw-normal"><i class="fa fa-map-marker col_yell me-1"></i> Lorem Road, Ipsum</h6>
+                                        <div class="list_1r2im2i row">
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Veg</h6>
+                                                    <h6><span class="fs-5">$ 110</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="list_1r2im2il">
+                                                    <h6 class="text-muted fw-normal">Non Veg</h6>
+                                                    <h6><span class="fs-5">$ 150</span> <span class="text-muted fw-normal font_14">per plate</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="mb-0 mt-3">
+                                            <li class="d-inline-block"><a href="detail.html"> 240-620 pax </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> 174 Rooms </a></li>
+                                            <li class="d-inline-block"><a href="detail.html"> +4 more </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="footer" class="p_3 bg_blue mt-1">
+    <div class="container-xl">
+        <div class="footer_1 row">
+            <div class="col">
+                <div class="footer_1i">
+                    <h5 class="text-white mb-3">Start Planning</h5>
+                    <div class="row footer_3ism">
+                        <h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#"> Search By Vendor</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Search By City</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Top Rated Vendors</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50"  href="#"> Destination Wedding</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="footer_1i">
+                    <h5 class="text-white mb-3">Wedding Ideas</h5>
+                    <div class="row footer_3ism">
+                        <h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#"> Wedding Blog</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Inspiration Gallery</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Real Wedding</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50"  href="#"> Wedding Venue</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="footer_1i">
+                    <h5 class="text-white mb-3">Photo Gallery</h5>
+                    <div class="row footer_3ism">
+                        <h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#"> Bridal Wear</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Wedding Jewellery</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Bridal Makeup & Hair</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Groom Wear</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Wedding Accessories</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50"  href="#"> Wedding Decor</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="footer_1i">
+                    <h5 class="text-white mb-3">Home</h5>
+                    <div class="row footer_3ism">
+                        <h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#"> About</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Contact Us</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Site Map</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Terms & Conditions</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Privacy Policy</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50"  href="#"> Our Gallery</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="footer_1i">
+                    <h5 class="text-white mb-3">Wedding Invitation</h5>
+                    <div class="row footer_3ism">
+                        <h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#"> Wedding Card Designs</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Save the Date Templates</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50"  href="#"> Invitation Video Templates</a></h6>
+
+                        <h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50"  href="#"> Our Location</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div> <hr class="line_1 mt-4 mb-4">
+        <div class="footer_2 row">
+            <div class="col-md-12">
+                <h6 class="text-white">Bridal - Your Personal Wedding Planner</h6>
+                <p class="mb-0 text-white-50 mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </div>
+        <div class="footer_3 row mt-4">
+            <div class="col-md-5">
+                <div class="footer_3l">
+                    <h6 class="text-white mb-3">Contact us for best deals</h6>
+                    <div class="footer_3li row">
+                        <div class="col-md-6">
+                            <div class="footer_3lil">
+                                <h6 class="text-white">For Vendors</h6>
+                                <h6 class="mb-0 text-white-50 lh-base fw-normal">info@gmail.com <br>
+                                    +123 4567 890</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer_3lil">
+                                <h6 class="text-white">For User</h6>
+                                <h6 class="mb-0 text-white-50 lh-base fw-normal">info@gmail.com <br>
+                                    +123 4567 890</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer_3m">
+                    <h6 class="text-white mb-3">Contact us for best deals</h6>
+                    <div class="row footer_3ism">
+                        <h6 class="col-md-12 col-6 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-facebook col_yell me-1"></i>  Facebook</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-twitter col_yell me-1"></i> Twitter</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-instagram col_yell me-1"></i> Instagram</a></h6>
+                        <h6 class="col-md-12 col-6 mt-2 mb-0 font_14 fw-normal"><a class="text-white-50" href="#"><i class="fa fa-youtube-play col_yell me-1"></i> Youtube</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer_3r">
+                    <h6 class="text-white mb-3">Get Latest Blog Alerts</h6>
+                    <p class="text-white-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control rounded-0" placeholder="Email">
+                        <span class="input-group-btn">
+					<button class="btn btn-primary bg_yell rounded-0 p-3 px-4 border-0 fw-bold" type="button">
+						Submit </button>
+				</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="footer_b" class="pt-3 pb-3 bg_light">
+    <div class="container-xl">
+        <div class="footer_b1 row text-center">
+            <div class="col-md-12">
+                <p class="mb-0 text-white-50">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_yell fw-bold" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    window.onscroll = function() {myFunction()};
+    var navbar_sticky = document.getElementById("navbar_sticky");
+    var sticky = navbar_sticky.offsetTop;
+    var navbar_height = document.querySelector('.navbar').offsetHeight;
+    function myFunction() {
+        if (window.pageYOffset >= sticky + navbar_height) {
+            navbar_sticky.classList.add("sticky")
+            document.body.style.paddingTop = navbar_height + 'px';
+        } else {
+            navbar_sticky.classList.remove("sticky");
+            document.body.style.paddingTop = '0'
+        }
+    }
+</script>
+
+</body>
+
+
+</html>
