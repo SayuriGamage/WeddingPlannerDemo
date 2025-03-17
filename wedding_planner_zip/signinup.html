@@ -72,15 +72,14 @@
                     <h5 class="bg-light p-3 rounded-3 fs-6 mb-3">Create Your Account</h5>
                     <div class="row">
                         <div class="col-md-6">
-                            <input class="form-control rounded-3" placeholder="First Name" type="text">
+                            <input class="form-control rounded-3" placeholder="First Name" type="text" id="name">
                         </div>
                         <div class="col-md-6">
                             <input class="form-control rounded-3" placeholder="Last Name" type="text">
                         </div>
                     </div>
-                    <input class="form-control rounded-3 mt-3" placeholder="Email Address" type="email">
-                    <input class="form-control rounded-3 mt-3" placeholder="Phone Number" type="tel">
-                    <input class="form-control rounded-3 mt-3" placeholder="Create Password" type="password">
+                    <input class="form-control rounded-3 mt-3" placeholder="Email Address" type="email" id="email">
+                    <input class="form-control rounded-3 mt-3" placeholder="Create Password" type="password" id="password">
                     <input class="form-control rounded-3 mt-3" placeholder="Confirm Password" type="password">
 
                     <!-- Add the select bar for choosing user role -->
@@ -99,7 +98,7 @@
                         </div>
                     </div>
 
-                    <h6 class="mb-0 mt-4 center_sm"><a class="button" href="#">Sign Up</a></h6>
+                    <h6 class="mb-0 mt-4 center_sm"><a class="button" href="#" id="registration">Sign Up</a></h6>
                     <div class="signup_login mt-4 text-center">
                         <p>Already have an account? <a class="col_yell" href="login.html">Login</a></p>
                     </div>
@@ -255,6 +254,43 @@
             document.body.style.paddingTop = '0'
         }
     }
+</script>
+
+<!--registration part-->
+<script>
+    document.getElementById("registration").addEventListener("click", function(event) {
+        event.preventDefault();
+
+        let fullName = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let role = document.getElementById("userRole").value;
+
+        let user = {
+            name: fullName,
+            email: email,
+            password: password,
+            role: role
+        };
+
+        fetch("http://localhost:8080/api/v1/user/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert("Registration successful!");
+                window.location.href = "index.html";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error registering user!");
+            });
+    });
+
 </script>
 
 </body>

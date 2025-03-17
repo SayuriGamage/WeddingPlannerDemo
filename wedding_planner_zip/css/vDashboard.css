@@ -1,0 +1,301 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #555;
+}
+
+/* Navbar Styles */
+#navbar_sticky {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Nova Square', sans-serif;
+    font-size: 1.5rem;
+    color: #333 !important;
+}
+
+.navbar-brand span {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #555 !important;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Dashboard Overview */
+.container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    color: #777;
+}
+
+.container .row h5 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.container .row p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* Manage Profile Section */
+#manage-profile {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#manage-profile h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control, .form-select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #555;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #333;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #555;
+}
+
+/* Manage Services Section */
+#manage-services {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#manage-services h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.table {
+    margin-top: 1rem;
+}
+
+.table th {
+    font-weight: 600;
+    color: #333;
+}
+
+.table td {
+    color: #555;
+}
+
+.btn-success, .btn-warning, .btn-danger, .btn-secondary {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+/* Booking Management Section */
+#booking-management {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#booking-management h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Reviews Section */
+#reviews {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.review {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.review h5 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.review p {
+    color: #555;
+}
+
+/* Notifications Section */
+#notifications {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#notifications h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+#notifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#notifications li {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+#footer h5 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#footer a {
+    color: #ddd;
+}
+
+#footer a:hover {
+    color: #fff;
+}
+
+#footer_b {
+    background-color: #222;
+    color: #ddd;
+    padding: 1rem 0;
+}
+
+#footer_b p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container h3 {
+        font-size: 1.2rem;
+    }
+
+    .container .row h5 {
+        font-size: 1rem;
+    }
+
+    .container .row p {
+        font-size: 1.2rem;
+    }
+}

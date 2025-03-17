@@ -78,15 +78,15 @@ a:hover {
     color: #555;
 }
 
-/* Search & Browse Vendors */
-#search-vendors {
+/* User Management */
+#user-management {
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#search-vendors h2 {
+#user-management h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #333;
@@ -114,20 +114,6 @@ a:hover {
 
 .btn-primary:hover {
     background-color: #555;
-}
-
-/* Booking Management */
-#booking-management {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#booking-management h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
 }
 
 .table {
@@ -159,51 +145,63 @@ a:hover {
     border: none;
 }
 
-/* Manage Reviews */
-#manage-reviews {
+/* Vendor Management */
+#vendor-management {
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#manage-reviews h2 {
+#vendor-management h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #333;
 }
 
-.review-card {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-radius: 4px;
-}
-
-.review-card h5 {
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.review-card p {
-    color: #555;
-}
-
-/* Profile Management */
-#profile-management {
+/* Service Management */
+#service-management {
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#profile-management h2 {
+#service-management h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #333;
 }
 
-/* Notifications & Messages */
+/* Booking Management */
+#booking-management {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#booking-management h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Reviews Management */
+#reviews-management {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reviews-management h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Notifications & Alerts */
 #notifications {
     background-color: #fff;
     padding: 2rem;
@@ -225,6 +223,20 @@ a:hover {
 #notifications li {
     padding: 0.5rem 0;
     color: #555;
+}
+
+/* Analytics & Reports */
+#analytics-reports {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#analytics-reports h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
 }
 
 /* Footer Styles */
