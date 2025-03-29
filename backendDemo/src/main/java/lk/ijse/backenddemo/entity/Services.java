@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -44,4 +45,8 @@ public class Services {
     private String image;
     @Column(columnDefinition = "LONGTEXT")
     private String logo;
+
+    @OneToMany(mappedBy = "services",cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Feature> feature;
 }

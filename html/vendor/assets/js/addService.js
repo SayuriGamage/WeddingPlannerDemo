@@ -105,7 +105,8 @@ $(document).ready(function () {
                                     <a href="" class="action-btn btn-edit" data-id="${service.id}">
                                         <i class="feather-edit-3"></i>
                                     </a>
-                                    <a href="javascript:void(0)" class="delete-table" data-id="${service.id}" data-bs-toggle="modal" data-bs-target="#delete-item">
+                                    <input type="hidden" id="deleteserviceId" value="${service.id}">
+                                    <a href="javascript:void(0)" id="ddddd" class="delete-table" data-id="${service.id}" data-bs-toggle="modal" data-bs-target="#delete-item">
                                         <i class="feather-trash-2"></i>
                                     </a>
                                      <a href="edit-listing.html" class="action-btn btn-plus" data-id="${service.id}">
@@ -129,8 +130,22 @@ $(document).ready(function () {
 
     loadServices();
 
+    const deleteService = document.getElementById('delete-item');
+
+    deleteService.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget; // Button that triggered the modal
+        const serviceId = button.getAttribute('data-id'); // Extract info from data-* attributes
+
+        console.log('Service ID:', serviceId);
+        // Update the modal's content
+
+    });
+
+
     $('#delete-service-btn').click(function () {
-        const id = $('#delete-item').data('id');
+        const id = $("#deleteserviceId").val();
+
+        console.log('Delete service ID:', id);
         console.log('Delete service:', id);
         $.ajax({
             url: `http://localhost:8080/api/v1/services/delete/${id}`,
@@ -148,5 +163,17 @@ $(document).ready(function () {
                 alert('Failed to delete service.');
             }
         });
+    });
+});
+
+/////////////////////////////////////
+$(document).ready(function () {
+    let editMode = false; // Track edit mode
+    const token = localStorage.getItem("token");
+
+    // Open modal
+    $(document).on("click", ".btn-plus", function (e) {
+        e.preventDefault();
+        $("#featureModal").modal("show");
     });
 });

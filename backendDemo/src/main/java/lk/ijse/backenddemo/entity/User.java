@@ -1,5 +1,6 @@
 package lk.ijse.backenddemo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,6 +10,7 @@ import org.hibernate.type.SqlTypes;
 
 import java.io.Serializable;
 import java.sql.SQLType;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -30,5 +32,10 @@ public class User implements Serializable {
     private String address;
     private String contact;
     private String photo;
+
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Services> services;
 
 }

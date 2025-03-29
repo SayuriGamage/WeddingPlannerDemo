@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <!-- Mirrored from listee.dreamstechnologies.com/html/my-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 08:50:31 GMT -->
@@ -198,6 +198,63 @@
 			</div>				
 		</div>			
 	    <!-- /Dashboard Content -->
+
+		<!-- Feature Modal -->
+		<!-- Feature & Gallery Modal -->
+		<div class="modal fade" id="featureModal" tabindex="-1" aria-labelledby="featureModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="featureModalLabel">Manage Features & Gallery</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!-- Feature Form (Horizontal Layout) -->
+						<form id="featureForm">
+							<input type="hidden" id="featureId"> <!-- Hidden input for edit -->
+
+							<div class="row align-items-center mb-3">
+								<label for="featureName" class="col-sm-3 col-form-label">Feature Name</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="featureName" required>
+								</div>
+							</div>
+
+							<div class="row align-items-center mb-3">
+								<label for="featureLogo" class="col-sm-3 col-form-label">Feature Logo</label>
+								<div class="col-sm-9">
+									<input type="file" class="form-control" id="featureLogo" accept="image/*">
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-end">
+								<button type="button" class="btn btn-primary" id="saveFeatureBtn">Save Feature</button>
+							</div>
+						</form>
+
+						<hr>
+
+						<!-- Gallery Upload (Horizontal Layout) -->
+						<h5 class="mt-4">Upload to Gallery</h5>
+						<form id="galleryForm">
+							<div class="row align-items-center mb-3">
+								<label for="galleryImages" class="col-sm-3 col-form-label">Select Images</label>
+								<div class="col-sm-9">
+									<input type="file" class="form-control" id="galleryImages" accept="image/*" multiple required>
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-end">
+								<button type="button" class="btn btn-success" id="uploadGalleryBtn">Upload Images</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--feature model-->
 
 		<!-- Delete Modal -->
 		<div class="modal fade" id="delete-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
