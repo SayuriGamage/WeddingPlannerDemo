@@ -9,15 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
+
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -33,6 +27,32 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
     }
+
+
+
+    @Override
+    public void deleteCategory(String name) {
+        if (categoryRepository.existsByName(name)) {
+            categoryRepository.deleteByName(name);
+        }
+    }
+
+    @Override
+    public boolean updateCategory(String id, CategoriesDTO categoryDTO) {
+
+        Category existingcat = categoryRepository.findById(UUID.fromString(id)).orElse(null);
+
+        if (existingcat != null) {
+            existingcat.setName(categoryDTO.getName());
+            existingcat.setDescription(categoryDTO.getDescription());
+            existingcat.setPhoto(categoryDTO.getPhoto());
+            categoryRepository.save(existingcat);
+            return true;
+        }
+        return false;
+
+    }
+
 
     @Override
     public CategoriesDTO saveCategory(CategoriesDTO categoryDTO) {

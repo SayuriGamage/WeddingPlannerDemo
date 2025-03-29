@@ -23,11 +23,11 @@ $("#signIn").click(function (event) {
             console.log("User role:", role);
             if (role === "vendor") {
                // window.location.href = "add-listing.html"; // Redirect after login
-                window.location.href = "http://localhost:63342/wedding_planner_zip/html/vendor/add-listing.html";
+                window.location.href = "http://localhost:63342/WeddingPlannerDemo/html/vendor/add-listing.html?_ijt=6khp7pl1l2vdf4n5a6bbt0bm64&_ij_reload=RELOAD_ON_SAVE";
             } else if(role === "bride") {
-                window.location.href = "http://localhost:63342/wedding_planner_zip/html/dashboard.html";
+                window.location.href = "http://localhost:63342/WeddingPlannerDemo/html/dashboard.html?_ijt=6khp7pl1l2vdf4n5a6bbt0bm64&_ij_reload=RELOAD_ON_SAVE";
             } else{
-                window.location.href = "http://localhost:63342/wedding_planner_zip/html/admin/account-settings.html";
+                window.location.href = "http://localhost:63342/WeddingPlannerDemo/html/admin/account-settings.html?_ijt=5hrc81kt1ra3d1ujep8omb08t0&_ij_reload=RELOAD_ON_SAVE";
             }
         },
         error: function (xhr) {

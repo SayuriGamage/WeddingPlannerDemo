@@ -3,10 +3,12 @@ package lk.ijse.backenddemo.controller;
 
 import lk.ijse.backenddemo.dto.CategoriesDTO;
 import lk.ijse.backenddemo.entity.Category;
+import lk.ijse.backenddemo.repo.CategoryRepository;
 import lk.ijse.backenddemo.service.CategoryService;
 import lk.ijse.backenddemo.util.PicEncoder;
 import lk.ijse.backenddemo.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -50,5 +52,32 @@ public class CategoryController {
         List<Category> categories = categoryService.getAllCategories();
         return ResponseEntity.ok(categories);
     }
+
+    @PutMapping(value = "/update/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PreAuthorize("hasAuthority('admin')")
+    public ResponseEntity<?> updateCategory(
+            @PathVariable ("id") String cid,
+            @RequestPart("name") String name,
+            @RequestPart("description") String description,
+            @RequestPart("photo") MultipartFile photo) {
+
+        CategoriesDTO categoryDTO = new CategoriesDTO();
+        categoryDTO.setName(name);
+        categoryDTO.setDescription(description);
+        categoryDTO.setPhoto(PicEncoder.generatePicture(photo));
+
+        return ResponseEntity.ok(categoryService.updateCategory(cid,categoryDTO));
+
+    }
+
+
+    @DeleteMapping(path = "/delete/{name}")
+    @PreAuthorize("hasAuthority('admin')")
+    public ResponseEntity<ResponseUtil> deleteCategory(@PathVariable String name) {
+        categoryService.deleteCategory(name);
+        return ResponseEntity.ok(new ResponseUtil(200, "Category has been deleted", null));
+    }
+
+
 
 }

@@ -11,4 +11,10 @@ public interface CategoryService {
     CategoriesDTO saveCategory(CategoriesDTO categoryDTO);
 
     List<Category> getAllCategories();
+
+    void deleteCategory(String name);
+
+
+    boolean updateCategory(String cid, CategoriesDTO categoryDTO);
+
 }
