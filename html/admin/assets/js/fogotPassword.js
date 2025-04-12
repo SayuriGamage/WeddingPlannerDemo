@@ -1,6 +1,8 @@
 // forgot-password.js
+
+
 document.getElementById('forgot-submit').addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
 
     const email = document.getElementById('forgot-email').value.trim();
     if (!email) {
@@ -8,25 +10,23 @@ document.getElementById('forgot-submit').addEventListener('click', function (e) 
         return;
     }
 
-    fetch('http://localhost:8080/api/v1/auth/forgot-password?email=' + email, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        }
+    fetch(`http://localhost:8080/api/v1/auth/forgot-password?email=${email}`, {
+        method: 'POST'
+        // No need for headers or body since we send email as query param
     })
         .then(response => {
             if (!response.ok) {
-                return response.json().then(err => { throw err; });
+                return response.text().then(err => { throw new Error(err); });
             }
-            return response.json();
+            return response.text();
         })
         .then(data => {
-            alert(data); // Show the response message
+            alert(data);
+
             if (data === "Reset link sent to email") {
-                // Store email in localStorage for later use
                 localStorage.setItem('resetEmail', email);
-                // Redirect to OTP verification page
-                window.location.href = 'otp-verification.html';
+                console.log("meka methanata wenkn eno reset ek")
+                window.location.href = 'fogotLogin.html';
             }
         })
         .catch(error => {
@@ -35,53 +35,52 @@ document.getElementById('forgot-submit').addEventListener('click', function (e) 
         });
 });
 
+
 // otp-verification.js
-document.getElementById('submit-otp').addEventListener('click', function(e) {
-    e.preventDefault();
 
-    const otp = document.getElementById('otp').value.trim();
-    const email = localStorage.getItem('resetEmail');
+    $("#submit-otp").click(function (e) {
+        e.preventDefault();
+        console.log("OTP Submit clicked!");
 
-    if (!otp) {
-        alert("Please enter OTP.");
-        return;
-    }
+        const otp = $("#otp").val().trim();
+        const email = localStorage.getItem("resetEmail");
 
-    // Verify OTP with backend
-    fetch(`http://localhost:8080/api/v1/auth/verify-otp?email=${email}&otp=${otp}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
+        if (!otp) {
+            alert("Please enter OTP.");
+            return;
         }
-    })
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then(err => { throw err; });
-            }
-            return response.json();
+
+        fetch(`http://localhost:8080/api/v1/auth/verify-otp?email=${email}&otp=${otp}`, {
+            method: 'POST'
         })
-        .then(data => {
-            if (data === "OTP verified successfully") {
-                // Store OTP in localStorage for password reset
-                localStorage.setItem('otpToken', otp);
-                window.location.href = 'new-password.html';
-            } else {
-                alert("Invalid OTP");
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert(error.message || "OTP verification failed");
-        });
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(err => { throw new Error(err); });
+                }
+                return response.text();
+            })
+            .then(data => {
+                if (data === "OTP verified successfully") {
+                    localStorage.setItem('otpToken', otp);
+                    window.location.href = 'newPassword.html';
+                } else {
+                    alert(data);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert(error.message || "OTP verification failed");
+            });
 });
 
+
 // new-password.js
+
 document.getElementById('new-password-submit').addEventListener('click', function(e) {
     e.preventDefault();
 
     const newPassword = document.getElementById('new-password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
-    const email = localStorage.getItem('resetEmail');
     const otpToken = localStorage.getItem('otpToken');
 
     if (!newPassword || !confirmPassword) {
@@ -100,21 +99,18 @@ document.getElementById('new-password-submit').addEventListener('click', functio
     }
 
     fetch(`http://localhost:8080/api/v1/auth/reset-password?token=${otpToken}&newPassword=${newPassword}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        method: 'POST'
+
     })
         .then(response => {
             if (!response.ok) {
-                return response.json().then(err => { throw err; });
+                return response.text().then(err => { throw new Error(err); });
             }
-            return response.json();
+            return response.text();
         })
         .then(data => {
             alert(data);
             if (data === "Password reset successful") {
-                // Clean up stored data
                 localStorage.removeItem('resetEmail');
                 localStorage.removeItem('otpToken');
                 window.location.href = 'login.html';
