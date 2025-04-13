@@ -206,7 +206,8 @@ function loadServiceDetails(data) {
                 <div class="map-details">
                     <div class="map-frame">
                        
-                        <iframe src="${data.mapUrl || 'https://www.google.com/maps/embed?pb=...'}" 
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.524486525694!2d79.853897!3d6.927079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25949c1e3bca7%3A0xf8e0c722b2a89a6!2sGalle%20Road%2C%20Colombo%20003!5e0!3m2!1sen!2slk!4v1711523456789"
+                          " 
                                 width="200" height="160" style="border:0;" 
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

@@ -1,3 +1,4 @@
+/*
 $("#signUp").click(function (event) {
     event.preventDefault();
 
@@ -38,4 +39,60 @@ $("#signUp").click(function (event) {
         }
     });
 
+});*/
+
+
+
+$("#signUp").click(function (event) {
+    event.preventDefault();
+
+    let fullName = $("#name").val();
+    let email = $("#email").val();
+    let password = $("#password").val();
+    let role = $("#role").val();
+
+    let user = {
+        email: email,
+        password: password,
+        name: fullName,
+        role: role
+    };
+
+    if (role === "vendor") {
+        // Save user temporarily to sessionStorage
+        sessionStorage.setItem("tempUser", JSON.stringify(user));
+
+        // Initiate payment request to backend
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/api/v1/payment/initiate",
+            contentType: "application/json",
+            dataType: "json",
+            data: JSON.stringify(user),
+            success: function (response) {
+                // Redirect to PayHere
+                window.location.href = response.redirectUrl;
+            },
+            error: function () {
+                alert("Error initiating payment");
+            }
+        });
+    } else {
+        // Normal bride registration
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/api/v1/user/register",
+            contentType: "application/json",
+            dataType: "json",
+            data: JSON.stringify(user),
+            success: function (response) {
+                alert("Signup Successful!");
+                window.location.href = "signin.html";
+            },
+            error: function () {
+                alert("Signup Failed!");
+            }
+        });
+    }
 });
+
