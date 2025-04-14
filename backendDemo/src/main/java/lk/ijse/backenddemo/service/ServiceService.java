@@ -28,4 +28,6 @@ public interface ServiceService {
 
     Optional<Services> getAllServicesById(String serviceId);
 
+    List<Services> getAllServicess();
+
 }

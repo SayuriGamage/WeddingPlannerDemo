@@ -260,93 +260,16 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
+                                        <th>Profile</th>
                                         <th>Provider Name</th>
                                         <th>Mobile</th>
-                                        <th>Reg Date</th>
-                                        <th>Plan</th>
+                                        <th>Email</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td class="table-namesplit">
-                                            <a href="javascript:void(0);" class="table-profileimage">
-                                                <img src="assets/img/customer/user-01.jpg" class="me-2" alt="img">
-                                            </a>
-                                            <a href="javascript:void(0);" class="table-name">
-                                                <span>Admin</span>
-                                                <p><span class="__cf_email__" data-cfemail="1a7b7e7773745a7d777b737634797577">[email&#160;protected]</span></p>
-                                            </a>
-                                        </td>
-                                        <td>+1 888 888 8888</td>
-                                        <td>30 Sep 2022</td>
-                                        <td>Basic</td>
-                                        <td><h6 class="badge-active">Active</h6></td>
-                                        <td>
-                                            <div class="table-actions d-flex">
-                                                <a class="delete-table me-2" href="edit-provider.html">
-                                                   <img src="assets/img/icons/edit.svg" alt="svg">
-                                                </a>
-                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
-                                                    <img src="assets/img/icons/delete.svg" alt="svg">
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td class="table-namesplit">
-                                            <a href="javascript:void(0);" class="table-profileimage">
-                                                <img src="assets/img/customer/user-07.jpg" class="me-2" alt="img">
-                                            </a>
-                                            <a href="javascript:void(0);" class="table-name">
-                                                <span>John Doe</span>
-                                                <p><span class="__cf_email__" data-cfemail="6b210403050f040e2b0e130a061b070e45080406">[email&#160;protected]</span></p>
-                                            </a>
-                                        </td>
-                                        <td>518-837-9258</td>
-                                        <td>27 Sep 2022</td>
-                                        <td>Basic</td>
-                                        <td><h6 class="badge-active">Active</h6></td>
-                                        <td>
-                                            <div class="table-actions d-flex">
-                                                <a class="delete-table me-2" href="edit-provider.html">
-                                                   <img src="assets/img/icons/edit.svg" alt="svg">
-                                                </a>
-                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
-                                                    <img src="assets/img/icons/delete.svg" alt="svg">
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td class="table-namesplit">
-                                            <a href="javascript:void(0);" class="table-profileimage">
-                                                <img src="assets/img/customer/user-09.jpg" class="me-2" alt="img">
-                                            </a>
-                                            <a href="javascript:void(0);" class="table-name">
-                                                <span>Robert</span>
-                                                <p><span class="__cf_email__" data-cfemail="e5978a87809791a58288848c89cb868a88">[email&#160;protected]</span></p>
-                                            </a>
-                                        </td>
-                                        <td>302-372-7812</td>
-                                        <td>25 Sep 2022</td>
-                                        <td>Basic</td>
-                                        <td><h6 class="badge-active">Active</h6></td>
-                                        <td>
-                                            <div class="table-actions d-flex">
-                                                <a class="delete-table me-2" href="edit-provider.html">
-                                                   <img src="assets/img/icons/edit.svg" alt="svg">
-                                                </a>
-                                                <a class="delete-table" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete-item">
-                                                    <img src="assets/img/icons/delete.svg" alt="svg">
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                <tbody id="vendorTableBody">
+                                <!-- Vendors will be loaded here -->
                                 </tbody>
                             </table>
                         </div>
@@ -385,6 +308,7 @@
     <!-- jQuery -->
  <script src="assets/js/jquery-3.7.1.min.js" ></script>
     <script src="assets/js/profile.js"></script>
+    <script src="assets/js/user.js"></script>
     
     <!-- Select 2 JS-->
     <script src="assets/js/select2.min.js"></script>

@@ -63,4 +63,12 @@ public class FeedbackServiceImpl implements FeedbackService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));
         return modelMapper.map(user, UserDTO.class);
     }
+
+    @Override
+    public List<Feedback> getAllFeedbacks() {
+        List<Feedback> feedbacks = feedbackRepository.findAll();
+        return feedbacks.stream()
+                .map(f -> modelMapper.map(f, Feedback.class))
+                .collect(Collectors.toList());
+    }
 }

@@ -2,6 +2,7 @@ package lk.ijse.backenddemo.service.impl;
 
 
 import lk.ijse.backenddemo.dto.ServiceDTO;
+import lk.ijse.backenddemo.entity.Category;
 import lk.ijse.backenddemo.entity.Services;
 import lk.ijse.backenddemo.entity.User;
 import lk.ijse.backenddemo.repo.ServiceRepository;
@@ -172,6 +173,32 @@ public class ServiceServiceImpl implements ServiceService {
         } else {
             throw new RuntimeException("Service not found with ID: " + serviceId);
         }
+    }
+
+    @Override
+    public List<Services> getAllServicess() {
+        return serviceRepository.findAll().stream().map(services -> {
+          Services dto=new Services();
+         dto.setId(services.getId());
+         dto.setUser(services.getUser());
+         dto.setCategory(services.getCategory());
+         dto.setTitle(services.getTitle());
+         dto.setDescription(services.getDescription());
+            dto.setTagline(services.getTagline());
+            dto.setAddress(services.getAddress());
+            dto.setMapAddress(services.getMapAddress());
+            dto.setBasePrice(services.getBasePrice());
+            dto.setEmail(services.getEmail());
+            dto.setWebsite(services.getWebsite());
+            dto.setPhone(services.getPhone());
+            dto.setFacebook(services.getFacebook());
+            dto.setTwitter(services.getTwitter());
+            dto.setGoogle(services.getGoogle());
+            dto.setInstagram(services.getInstagram());
+            dto.setImage(services.getImage());
+            dto.setLogo(services.getLogo());
+            return dto;
+        }).collect(Collectors.toList());
     }
 
 

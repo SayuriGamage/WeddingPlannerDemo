@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/profile")
@@ -69,6 +70,27 @@ public class ProfileController {
         System.out.println("userge id eka enawa"+ user.get().getUid());
         List<User> userlist=profileService.getUserDetails(user.get().getUid());
         return ResponseEntity.ok(userlist);
+    }
+
+
+    @GetMapping("/vendors")
+    public List<User> getAllVendors() {
+        return profileRepository.findAll()
+                .stream()
+                .filter(user -> "vendor".equalsIgnoreCase(user.getRole()))
+                .collect(Collectors.toList());
+    }
+
+    @GetMapping("/brides")
+    public List<User> getAllBrides() {
+       /* return profileRepository.findAll()
+                .stream()
+                .filter(user -> "bride".equalsIgnoreCase(user.getRole()))
+                .collect(Collectors.toList());*/
+
+        List<User> brides = profileRepository.findAllBrides();
+        return brides;
+
     }
 
 

@@ -2,6 +2,7 @@ package lk.ijse.backenddemo.controller;
 
 
 import lk.ijse.backenddemo.dto.ServiceDTO;
+import lk.ijse.backenddemo.entity.Category;
 import lk.ijse.backenddemo.entity.Services;
 import lk.ijse.backenddemo.entity.User;
 import lk.ijse.backenddemo.repo.ProfileRepository;
@@ -124,6 +125,13 @@ public class  ServiceController {
     public ResponseEntity<?> getAllDetailsForService(@PathVariable String serviceId) {
         Optional<Services> services = serviceService.getAllServicesById(serviceId);
         return ResponseEntity.ok(services);
+    }
+
+
+    @GetMapping("/loadall")
+    public ResponseEntity<List<Services>> getAllServices() {
+        return ResponseEntity.ok(serviceService.getAllServicess());
+
     }
 
 }

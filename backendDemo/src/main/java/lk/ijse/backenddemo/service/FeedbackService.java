@@ -2,6 +2,7 @@ package lk.ijse.backenddemo.service;
 
 import lk.ijse.backenddemo.dto.FeedbackDTO;
 import lk.ijse.backenddemo.dto.UserDTO;
+import lk.ijse.backenddemo.entity.Feedback;
 import lk.ijse.backenddemo.entity.Services;
 
 import java.util.List;
@@ -15,5 +16,8 @@ public interface FeedbackService {
     List<FeedbackDTO> getFeedbackByServiceId(String serviceId);
 
     UserDTO getUserByEmail(String email);
+
+    List<Feedback> getAllFeedbacks();
+
 
 }

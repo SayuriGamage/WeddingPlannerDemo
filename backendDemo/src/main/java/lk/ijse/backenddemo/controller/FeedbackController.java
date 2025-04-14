@@ -2,6 +2,7 @@ package lk.ijse.backenddemo.controller;
 
 import lk.ijse.backenddemo.dto.FeedbackDTO;
 import lk.ijse.backenddemo.dto.UserDTO;
+import lk.ijse.backenddemo.entity.Feedback;
 import lk.ijse.backenddemo.entity.Services;
 import lk.ijse.backenddemo.service.FeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 @RestController
 @RequestMapping("/api/v1/feedback")
@@ -20,6 +19,8 @@ public class FeedbackController  {
 
     @Autowired
   private   FeedbackService feedbackService;
+
+
 
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('bride')")
@@ -61,5 +62,13 @@ public class FeedbackController  {
         UserDTO userDTO = feedbackService.getUserByEmail(email);
         return ResponseEntity.ok(userDTO);
     }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<Feedback>> getAllServices() {
+        return ResponseEntity.ok(feedbackService.getAllFeedbacks());
+
+    }
+
+
 
 }
