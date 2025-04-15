@@ -44,15 +44,33 @@ public class PasswordResetController {
         return ResponseEntity.ok("Reset link sent to email");
     }
 
+    @PostMapping("/verify-otp")
+    public ResponseEntity<String> verifyOtp(@RequestParam String email, @RequestParam String otp) {
+        // OTP token table eken email ekata adala token eka ganna
+        PasswordResetToken resetToken = tokenRepo.findByEmailAndToken(email, otp);
+
+        if (resetToken == null) {
+            return ResponseEntity.badRequest().body("Invalid OTP");
+        }
+
+        if (resetToken.getExpiration().isBefore(LocalDateTime.now())) {
+            return ResponseEntity.badRequest().body("OTP expired");
+        }
+
+        return ResponseEntity.ok("OTP verified successfully");
+    }
+
+
     @PostMapping("/reset-password")
-    public ResponseEntity<String> resetPassword(@RequestParam String token, @RequestParam String newPassword) {
-        PasswordResetToken resetToken = tokenRepo.findByToken(token);
+    public ResponseEntity<String> resetPassword(@RequestParam String email, @RequestParam String newPassword) {
+        // Find the latest token for the given email
+        PasswordResetToken resetToken = tokenRepo.findTopByEmailOrderByExpirationDesc(email);
 
         if (resetToken == null || resetToken.getExpiration().isBefore(LocalDateTime.now())) {
             return ResponseEntity.badRequest().body("Invalid or expired token");
         }
 
-        Optional<User> userOptional = Optional.ofNullable(userRepo.findByEmail(resetToken.getEmail()));
+        Optional<User> userOptional = userRepo.findByEmails(email);
         if (userOptional.isEmpty()) {
             return ResponseEntity.badRequest().body("User not found");
         }
@@ -61,8 +79,9 @@ public class PasswordResetController {
         user.setPassword(passwordEncoder.encode(newPassword));
         userRepo.save(user);
 
-        tokenRepo.delete(resetToken);
+        tokenRepo.delete(resetToken); // Invalidate used token
 
         return ResponseEntity.ok("Password reset successful");
     }
+
 }
