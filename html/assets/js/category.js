@@ -57,9 +57,10 @@ function loadServicesByCategory(category) {
                                 </a>
                                 <div class="fav-item">
                                     <span class="featured-text">Featured</span>
-                                    <a href="service-details.html?id=${service.id}" class="fav-icon">
-                                        <i class="feather-heart"></i>
-                                    </a>										
+                                   <a class="fav-icon" data-service-id="${service.id}" onclick="bookmarkService('${service.id}')">
+    <i class="feather-heart"></i>
+</a>
+										
                                 </div>															    
                             </div>
                             <div class="bloglist-content">
@@ -102,6 +103,43 @@ function loadServicesByCategory(category) {
         })
         .catch(error => console.error('Error loading services:', error));
 }
+function bookmarkService(serviceId) {
+    const token = localStorage.getItem("accessToken");
+
+    const formData = new FormData();
+    formData.append("serviceId", serviceId);
+
+    fetch("http://localhost:8080/api/v1/bookmarks/save", {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        },
+        body: formData
+    })
+        .then(response => {
+            if (!response.ok) {
+                // Get the error message from the response if possible
+                return response.json().then(errData => {
+                    throw new Error(errData.message || "Failed to save bookmark");
+                }).catch(() => {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                });
+            }
+            return response.text();
+        })
+        .then(msg => {
+            alert("Service bookmarked!");
+            const heart = document.querySelector(`.fav-icon[data-service-id='${serviceId}'] i`);
+            if (heart) {
+                heart.classList.add("text-danger");
+            }
+        })
+        .catch(err => {
+            console.error("Bookmark error:", err);
+            alert(`Error bookmarking service: ${err.message}`);
+        });
+}
+
 
 
 function getServiceIdFromUrl() {

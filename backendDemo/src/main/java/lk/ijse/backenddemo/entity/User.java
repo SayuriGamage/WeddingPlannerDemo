@@ -41,4 +41,15 @@ public class User implements Serializable {
     @ToString.Exclude
     private List<Services> services;
 
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
+    @ToString.Exclude
+    private List<Payment> payments;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
+    @ToString.Exclude
+    private List<Bookmark> bookmarks;
+
 }

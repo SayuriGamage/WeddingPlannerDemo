@@ -1,60 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly Payment Details</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vendor Monthly Payment</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #1e1e1e, #2c2c2c);
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            max-width: 450px;
+            width: 100%;
+        }
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+        .glass-card h5 {
+            color: #fff;
+            text-align: center;
+        }
+
+        .card-title,
+        .card-text {
+            color: #ddd;
+        }
+
+        .btn-success {
+            background-color: #00ff99;
+            color: #000;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #00cc7a;
+        }
+
+        a {
+            color: #ccc;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        .card-footer {
+            font-size: 0.9rem;
+        }
+
+        .btn-pay {
+            background-color: #ff4d4d;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn-pay:hover {
+            background-color: #cc0000;
+        }
+    </style>
 </head>
 <body>
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card shadow">
-                <div class="card-header text-center bg-primary text-white">
-                    <h5>Monthly Payment Details</h5>
-                </div>
-                <div class="card-body">
-                    <h6 class="card-title">User: <span id="userName">John Doe</span></h6>
-                    <p class="card-text">Amount Due: <strong>$100</strong></p>
-                    <p class="card-text">Due Date: <strong>15th of Every Month</strong></p>
-                    <div class="text-center">
-                        <button class="btn btn-success" id="payNowBtn">
-                            <i class="fas fa-credit-card"></i> Pay Now
-                        </button>
-                    </div>
-                </div>
-                <div class="card-footer text-muted text-center">
-                    Contact support for any issues: <a href="mailto:support@example.com">support@example.com</a>
-                </div>
-            </div>
-        </div>
+<div class="glass-card">
+    <h5>Vendor Monthly Subscription</h5>
+    <hr style="border-color: rgba(255,255,255,0.2);" />
+    <h6 class="card-title">User: <span id="userName"></span></h6>
+    <p class="card-text">Monthly Fee: <strong>$20</strong></p>
+    <p class="card-text">Service Ads Limit: <strong>3 Ads per Month</strong></p>
+    <div class="text-center my-3">
+        <button class="btn btn-pay w-100" id="payNowBtn">Pay Now
+        </button>
+    </div>
+    <div class="card-footer text-center mt-3">
+        Need help? <a href="mailto:support@example.com">support@example.com</a>
     </div>
 </div>
 
-<!-- Bootstrap JS -->
 <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://www.payhere.lk/lib/payhere.js"></script>
 
-<!-- Custom JS -->
-<script>
-    // Example: Dynamically update user details
-    document.addEventListener("DOMContentLoaded", function () {
-        const userName = "Jane Smith"; // Replace with dynamic data
-        const amountDue = "$150"; // Replace with dynamic data
-        const dueDate = "10th of Every Month"; // Replace with dynamic data
-
-        document.getElementById("userName").textContent = userName;
-        document.querySelector(".card-text strong").textContent = amountDue;
-        document.querySelectorAll(".card-text strong")[1].textContent = dueDate;
-    });
-</script>
+<script src="assets/js/payment.js"></script>
 </body>
 </html>
